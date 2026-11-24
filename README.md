@@ -16,3 +16,7 @@ For temporary credentials, also add `aws_session_token` to the profile. In the
 **Actions** tab, select **AWS credential check** and click **Run workflow**.
 The workflow calls AWS STS `GetCallerIdentity` and reports success without
 printing the returned identity.
+
+The same workflow checks a Slack user token with `auth.test`. Create a
+repository Actions secret named `SLACK_USER_TOKEN` containing only the
+`xoxp-...` token, without quotes or a `Bearer` prefix.
